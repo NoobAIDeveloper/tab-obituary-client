@@ -1,0 +1,31 @@
+{
+  "name": "tab-obituary-client",
+  "version": "0.0.0",
+  "description": "Tab Obituary Chrome MV3 extension.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tabob/shared": "^1.0.0",
+    "idb": "^8.0.3",
+    "preact": "^10.29.1",
+    "tldts": "^7.0.28",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.0.0-beta.33",
+    "@preact/preset-vite": "^2.10.5",
+    "@testing-library/preact": "^3.2.4",
+    "@types/chrome": "^0.1.40",
+    "fake-indexeddb": "^6.2.5",
+    "happy-dom": "^20.9.0",
+    "typescript": "^5.6.3",
+    "vite": "^8.0.9",
+    "vitest": "^2.1.9"
+  }
+}

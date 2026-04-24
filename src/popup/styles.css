@@ -1,0 +1,223 @@
+:root {
+  color-scheme: light dark;
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 360px;
+  min-height: 280px;
+  background: #fbfaf7;
+  color: #1b1b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #141313;
+    color: #e8e6e1;
+  }
+}
+
+#root {
+  padding: 24px 22px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.muted {
+  color: #8a8a8a;
+  font-size: 12px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 232px;
+  gap: 16px;
+}
+
+.screen-header {
+  margin: 0;
+}
+
+.screen-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.screen-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.btn {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #1b1b1b;
+  color: #fbfaf7;
+  border-color: #1b1b1b;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #1b1b1b;
+  border-color: #1b1b1b;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #8a8a8a;
+  border-color: transparent;
+  padding: 8px 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-primary {
+    background: #e8e6e1;
+    color: #141313;
+    border-color: #e8e6e1;
+  }
+  .btn-secondary {
+    color: #e8e6e1;
+    border-color: #e8e6e1;
+  }
+  .btn-ghost {
+    color: #8a8a8a;
+  }
+}
+
+.progress-indicator {
+  margin-top: auto;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.form-field > span {
+  color: #8a8a8a;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #8a8a8a;
+  background: #fff;
+  color: #1b1b1b;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1b1b1b;
+  box-shadow: 0 0 0 2px rgba(27, 27, 27, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-input {
+    background: #1b1b1b;
+    color: #e8e6e1;
+    border-color: #55504a;
+  }
+  .form-input:focus {
+    border-color: #e8e6e1;
+    box-shadow: 0 0 0 2px rgba(232, 230, 225, 0.15);
+  }
+}
+
+.error {
+  color: #b3261e;
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .error {
+    color: #ff8a80;
+  }
+}
+
+.choice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.readonly-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px dashed #8a8a8a;
+  color: #8a8a8a;
+  font-size: 13px;
+}
+
+.email-preview-wrapper {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #d9d6cf;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .email-preview-wrapper {
+    border-color: #55504a;
+  }
+}
+
+/* Email clients uniformly assume light backgrounds, so this frame does NOT
+   respect prefers-color-scheme. */
+.email-preview-frame {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: 0;
+  background: #fff;
+}
